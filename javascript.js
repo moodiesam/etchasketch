@@ -88,9 +88,7 @@ function colorFunction(choice) {
         };
         cellsCopy.forEach(c => c.addEventListener('mouseenter', runEvent));
         function runEvent(){
-            this.classList.remove("backgroundRainbow");
-            this.classList.remove("backgroundBlack");
-            this.classList.add("backgroundWhite");
+            this.style.backgroundColor = "whitesmoke";
         }; 
     } else if (choice === 'rainbow') {
         for (let i=0; i<cells.length; i++) {
@@ -98,9 +96,8 @@ function colorFunction(choice) {
         };
         cellsCopy.forEach(c => c.addEventListener('mouseenter', runEvent));
         function runEvent(){
-            this.classList.remove("backgroundWhite");
-            this.classList.remove("backgroundBlack");
-            this.classList.add("backgroundRainbow");
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            this.style.backgroundColor = "#" + randomColor;
         };
     } else if (choice === 'black') {
         for (let i=0; i<cells.length; i++) {
@@ -108,9 +105,7 @@ function colorFunction(choice) {
         };
         cellsCopy.forEach(c => c.addEventListener('mouseenter', runEvent));
         function runEvent(){
-            this.classList.remove("backgroundWhite");
-            this.classList.remove("backgroundRainbow");
-            this.classList.add("backgroundBlack");
+            this.style.backgroundColor = "black";
         };
     };
 };

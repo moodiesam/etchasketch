@@ -1,4 +1,4 @@
-.body {
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,17 +30,17 @@
     margin-bottom: 40px;
 }
 
-.btn-black {
+#btn-black {
     background-color: black;
     color: white;
 }
 
-.btn-white {
+#btn-white {
     background-color: white;
     color: black;
 }
 
-.btn-rainbow {
+#btn-rainbow {
     background-color: lightsalmon;
     color: blue;
     border: green;
@@ -74,10 +74,9 @@
     background-color: black;
 }
 
-.backgroundWhite {
-    background-color: white;
-}
-
-.backgroundRainbow {
-    background-color: red;
+footer {
+    background-color: gray;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
