@@ -30,14 +30,21 @@ var button = document.getElementById('btn');
 button.addEventListener('click', buttonClick);
 
 function buttonClick(){
-    for (i=0; i<grid.children.length; i++) {
-        grid.firstElementChild.remove;
-    }
+
+//first remove divs from the old grid
+
+    function removeAllChildNodes(parent) {
+            while (parent.firstChild) {
+                parent.removeChild(parent.firstChild);
+            };
+    };
+
+    removeAllChildNodes(grid);
+
+//then create the new grid size
 
     gridSize = window.prompt("How many squares per side?", "16");
     console.log(gridSize);
-
-    //need to first remove old grid
 
     makeGrid(gridSize, gridSize);
     colorChange();
